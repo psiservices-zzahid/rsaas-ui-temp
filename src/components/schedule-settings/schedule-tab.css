@@ -1,0 +1,32 @@
+input[type="text"],
+select {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.row {
+  padding: 0.5em;
+  padding-top: 1em;
+}
+.date {
+  padding-top: 0.9rem;
+  padding-bottom: 0.9rem;
+  width: 100%;
+  font-size: 0.9rem;
+}
+.filter-accordian {
+  background-color: #f2f6fa !important;
+  width: 50em;
+}
+.center {
+  margin: 0.5em;
+  align-self: center;
+  background-color: #014a99 !important;
+}
+
+#accordText {
+  color: #004a99 !important;
+  font-family: "Work Sans", sans-serif !important;
+}

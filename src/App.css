@@ -1,0 +1,14 @@
+/* .left-element {
+  background: green !important;
+  display: inline-block;
+  float: left;
+}
+
+.right-element {
+  background: red;
+  display: inline-block;
+  float: left;
+} */
+.fixed {
+  position: fixed;
+}
