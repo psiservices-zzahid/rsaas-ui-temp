@@ -14,6 +14,7 @@ const StyledSideNav = styled.div`
   background-color: #f8f9fa;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding: 0.5rem;
+  width: 20rem;
 `;
 
 class SideNav extends React.Component {
@@ -30,7 +31,6 @@ class SideNav extends React.Component {
         },
         {
           path: "/schedule",
-          css: "padding-right: 1.5rem",
           name: "SCHEDULE SETTINGS",
           key: 2,
         },

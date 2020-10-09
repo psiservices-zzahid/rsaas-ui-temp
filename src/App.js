@@ -2,7 +2,7 @@ import React from "react";
 import PsiNavbar from "./components/common/navbar";
 import SideBar from "./components/common/sidebar";
 import psiLogo from "./PSI-white-logo.svg";
-import { Home } from "./components/schedule-settings/schedule-tab";
+import { ScheduleSettings } from "./components/schedule-settings/schedule-tab";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./App.css";
 
@@ -15,9 +15,9 @@ function App() {
           <div className="d-flex">
             <SideBar />
             <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/about" component={Home} />
-              <Route component={Home} />
+              <Route exact path="/" component={ScheduleSettings} />
+              <Route path="/about" component={ScheduleSettings} />
+              <Route component={ScheduleSettings} />
             </Switch>
           </div>
         </Router>

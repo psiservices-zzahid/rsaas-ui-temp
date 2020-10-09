@@ -6,24 +6,24 @@ import makeData from "./makeData";
 
 const Styles = styled.div`
   flex-shrink: 0;
-  border-collapse: separate;
-  border-spacing: 0 15px;
   table {
-    padding: 1.5rem;
+    border-collapse: separate;
+    border-spacing: 0 0.5rem;
     text-align: center;
     width: 100%;
     tr {
+      box-shadow: 0 0 0.2rem #ddd;
     }
     th,
     td {
       padding: 1rem;
-      border-top: 1px solid grey;
-      border-bottom: 1px solid grey;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
       :first-child {
-        border-left: 1px solid black;
+        border-left: 1px solid #ccc;
       }
       :last-child {
-        border-right: 1px solid black;
+        border-right: 1px solid #ccc;
       }
     }
   }
@@ -54,21 +54,27 @@ function Table({ columns, data }) {
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
-              {headerGroup.headers.map((column) => (
-                // Add the sorting props to control sorting. For this example
-                // we can add them into the header props
-                <th {...column.getHeaderProps(column.getSortByToggleProps())}>
-                  {column.render("Header")}
-                  {/* Add a sort direction indicator */}
-                  <span>
-                    {column.isSorted
-                      ? column.isSortedDesc
-                        ? " 🔽"
-                        : " 🔼"
-                      : ""}
-                  </span>
-                </th>
-              ))}
+              {headerGroup.headers.map((column) => {
+                const sortProps =
+                  column.render("Header") === "Agent Name"
+                    ? column.getHeaderProps(column.getSortByToggleProps())
+                    : "";
+                return (
+                  // Add the sorting props to control sorting. For this example
+                  // we can add them into the header props
+                  <th {...sortProps}>
+                    {column.render("Header")}
+                    {/* Add a sort direction indicator */}
+                    <span>
+                      {column.isSorted
+                        ? column.isSortedDesc
+                          ? " 🔽"
+                          : " 🔼"
+                        : ""}
+                    </span>
+                  </th>
+                );
+              })}
             </tr>
           ))}
         </thead>

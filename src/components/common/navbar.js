@@ -31,7 +31,7 @@ const Styles = styled.div`
 export default function PsiNavbar(props) {
   return (
     <Styles>
-      <Navbar class="navbar">
+      <Navbar className="navbar">
         <Navbar.Brand href="#home">
           <img
             src={props.logo}

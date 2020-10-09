@@ -18,10 +18,10 @@ select {
 }
 .filter-accordian {
   background-color: #f2f6fa !important;
-  width: 50em;
+  width: 50rem;
 }
 .center {
-  margin: 0.5em;
+  margin-top: 1.5rem;
   align-self: center;
   background-color: #014a99 !important;
 }
