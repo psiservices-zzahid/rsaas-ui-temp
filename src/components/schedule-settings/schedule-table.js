@@ -68,8 +68,8 @@ function Table({ columns, data }) {
                     <span>
                       {column.isSorted
                         ? column.isSortedDesc
-                          ? " 🔽"
-                          : " 🔼"
+                          ? " ▼"
+                          : " ▲"
                         : ""}
                     </span>
                   </th>
